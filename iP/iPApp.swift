@@ -11,7 +11,7 @@ import SwiftUI
 struct iPApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            IPView()
         }
     }
 }

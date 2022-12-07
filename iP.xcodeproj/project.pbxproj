@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		836E6F702940976200893DC4 /* iPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E6F6F2940976200893DC4 /* iPApp.swift */; };
-		836E6F722940976200893DC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E6F712940976200893DC4 /* ContentView.swift */; };
+		836E6F722940976200893DC4 /* IPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E6F712940976200893DC4 /* IPView.swift */; };
 		836E6F742940976400893DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836E6F732940976400893DC4 /* Assets.xcassets */; };
 		836E6F782940976400893DC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836E6F772940976400893DC4 /* Preview Assets.xcassets */; };
+		836E6F822940987200893DC4 /* ManageAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E6F812940987200893DC4 /* ManageAPIs.swift */; };
+		836E6F84294098AB00893DC4 /* IPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E6F83294098AB00893DC4 /* IPViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		836E6F6C2940976200893DC4 /* iP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836E6F6F2940976200893DC4 /* iPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPApp.swift; sourceTree = "<group>"; };
-		836E6F712940976200893DC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		836E6F712940976200893DC4 /* IPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPView.swift; sourceTree = "<group>"; };
 		836E6F732940976400893DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		836E6F752940976400893DC4 /* iP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iP.entitlements; sourceTree = "<group>"; };
 		836E6F772940976400893DC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		836E6F812940987200893DC4 /* ManageAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAPIs.swift; sourceTree = "<group>"; };
+		836E6F83294098AB00893DC4 /* IPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,10 @@
 			isa = PBXGroup;
 			children = (
 				836E6F6F2940976200893DC4 /* iPApp.swift */,
-				836E6F712940976200893DC4 /* ContentView.swift */,
+				836E6F7E294097F900893DC4 /* IPViews */,
+				836E6F712940976200893DC4 /* IPView.swift */,
+				836E6F83294098AB00893DC4 /* IPViewModel.swift */,
+				836E6F802940986100893DC4 /* APIs */,
 				836E6F732940976400893DC4 /* Assets.xcassets */,
 				836E6F752940976400893DC4 /* iP.entitlements */,
 				836E6F762940976400893DC4 /* Preview Content */,
@@ -67,6 +74,21 @@
 				836E6F772940976400893DC4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		836E6F7E294097F900893DC4 /* IPViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IPViews;
+			sourceTree = "<group>";
+		};
+		836E6F802940986100893DC4 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				836E6F812940987200893DC4 /* ManageAPIs.swift */,
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836E6F722940976200893DC4 /* ContentView.swift in Sources */,
+				836E6F722940976200893DC4 /* IPView.swift in Sources */,
+				836E6F84294098AB00893DC4 /* IPViewModel.swift in Sources */,
+				836E6F822940987200893DC4 /* ManageAPIs.swift in Sources */,
 				836E6F702940976200893DC4 /* iPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +303,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -317,7 +341,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
