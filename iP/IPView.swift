@@ -31,8 +31,6 @@ struct IPView: View {
                 .cornerRadius(10)
                 .padding(.vertical, 50)
             }
-            
         }
-        
     }
 }
