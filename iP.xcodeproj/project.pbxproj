@@ -40,7 +40,6 @@
 		836E6F632940976200893DC4 = {
 			isa = PBXGroup;
 			children = (
-				836E6F852940AD8D00893DC4 /* Intro */,
 				836E6F6E2940976200893DC4 /* iP */,
 				836E6F6D2940976200893DC4 /* Products */,
 			);
@@ -59,8 +58,6 @@
 			children = (
 				836E6F6F2940976200893DC4 /* iPApp.swift */,
 				836E6F7E294097F900893DC4 /* IPViews */,
-				836E6F712940976200893DC4 /* IPView.swift */,
-				836E6F83294098AB00893DC4 /* IPViewModel.swift */,
 				836E6F802940986100893DC4 /* APIs */,
 				836E6F732940976400893DC4 /* Assets.xcassets */,
 				836E6F752940976400893DC4 /* iP.entitlements */,
@@ -80,6 +77,8 @@
 		836E6F7E294097F900893DC4 /* IPViews */ = {
 			isa = PBXGroup;
 			children = (
+				836E6F712940976200893DC4 /* IPView.swift */,
+				836E6F83294098AB00893DC4 /* IPViewModel.swift */,
 			);
 			path = IPViews;
 			sourceTree = "<group>";
@@ -90,13 +89,6 @@
 				836E6F812940987200893DC4 /* ManageAPIs.swift */,
 			);
 			path = APIs;
-			sourceTree = "<group>";
-		};
-		836E6F852940AD8D00893DC4 /* Intro */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Intro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
