@@ -7,9 +7,11 @@
 
 import SwiftUI
 import MapKit
+import Network
 
 struct IPView: View {
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
+    @StateObject var networkMonitor = NetworkMonitor()
     @StateObject var ipv = IPViewModel()
     
     var body: some View {
@@ -24,14 +26,18 @@ struct IPView: View {
                 VStack {
                     Spacer()
                     VStack(spacing: 20) {
-                        Text("**IP**: \(ipv.ipAddress)")
-                        Text("\(ipv.ipGeo.city), \(ipv.ipGeo.country)")
+                        Text("\("IP Address"): \(ipv.ipAddress)")
+                        Text("\("Location"): \(ipv.ipGeo.city), \(ipv.ipGeo.country)")
+                        NavigationLink(destination:
+                            Text("Second View")){
+                            Text("Click Here for Network Info")
+                        }
                     }
                     .padding()
-                    .frame(width: 330)
-                    .background(.thickMaterial)
-                    .cornerRadius(10)
-                    .padding(.vertical, 50)
+                    .frame(width: 350)
+                    .background(.thinMaterial)
+                    .cornerRadius(20)
+                    .padding(.vertical, 35)
                 }
             }
         }
@@ -64,7 +70,7 @@ struct OnboardingView: View {
             
             PageView(
                 title: "Basic Network Info",
-                subtitle: "We also can give you basic network info such as your wifi, etc.",
+                subtitle: "We also can give you your device's current basic network info!",
                 imageName: "Info",
                 showsDismissButton: true,
                 shouldShowOnboarding: $shouldShowOnboarding
@@ -113,6 +119,30 @@ struct PageView: View {
             }
         }
     }
+}
+
+class NetworkMonitor: ObservableObject {
+    private let monitor = NWPathMonitor()
+    private let queue = DispatchQueue(label: "Monitor")
+    @Published var active = false
+    @Published var expensive = false
+    @Published var constrained = false
+    @Published var connectionType = NWInterface.InterfaceType.other
+    
+    init() {
+        monitor.pathUpdateHandler = {path in
+            DispatchQueue.main.async {
+                self.active = path.status == .satisfied
+                self.expensive = path.isExpensive
+                self.constrained = path.isConstrained
+                
+                let connectionTypes: [NWInterface.InterfaceType] = [.cellular, .wifi, .wiredEthernet]
+                self.connectionType = connectionTypes.first(where: path.usesInterfaceType) ?? .other
+            }
+        }
+        monitor.start(queue: queue)
+    }
+    
 }
 
 struct IP_Previews: PreviewProvider {
