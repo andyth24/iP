@@ -14,6 +14,20 @@ struct NetworkView: View {
     var body: some View {
         NavigationView{
             VStack(alignment: .leading, spacing: 30) {
+                
+                if(networkMonitor.active == true)
+                {
+                    Image(systemName: "wifi")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 250, height: 250)
+                } else {
+                        Image(systemName: "wifi.slash")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 250, height: 250)
+                }
+                
                 if(networkMonitor.active == true) {
                     Text("Connected: Yes")
                 } else {
@@ -38,5 +52,11 @@ struct NetworkView: View {
         .font(.title2)
         .navigationBarTitle("Your Device's Network Info")
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct Network_Preview: PreviewProvider {
+    static var previews: some View{
+        NetworkView()
     }
 }
