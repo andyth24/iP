@@ -61,7 +61,7 @@ extension IPView {
         }
 
         private func callLocation(ip: String) {
-            api.callData(url: "https://ipapi.co/\(ip)/json/", model: IPCoordinates.self) { result in
+            api.callData(url: "https://ipapi.com/\(ip)/json/", model: IPCoordinates.self) { result in
                 self.runMain {
                     self.location = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: result.latitude, longitude: result.longitude), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
                 }

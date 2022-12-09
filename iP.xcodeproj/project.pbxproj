@@ -13,6 +13,10 @@
 		836E6F782940976400893DC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836E6F772940976400893DC4 /* Preview Assets.xcassets */; };
 		836E6F822940987200893DC4 /* ManageAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E6F812940987200893DC4 /* ManageAPIs.swift */; };
 		836E6F84294098AB00893DC4 /* IPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E6F83294098AB00893DC4 /* IPViewModel.swift */; };
+		83EB864829431E9600BFCD5F /* NetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB864729431E9600BFCD5F /* NetworkView.swift */; };
+		83EB864B29431F3300BFCD5F /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB864A29431F3300BFCD5F /* NetworkMonitor.swift */; };
+		83EB864D29431F7E00BFCD5F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB864C29431F7E00BFCD5F /* OnboardingView.swift */; };
+		83EB864F29431FC900BFCD5F /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB864E29431FC900BFCD5F /* PageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		836E6F772940976400893DC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		836E6F812940987200893DC4 /* ManageAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAPIs.swift; sourceTree = "<group>"; };
 		836E6F83294098AB00893DC4 /* IPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPViewModel.swift; sourceTree = "<group>"; };
+		83EB864729431E9600BFCD5F /* NetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkView.swift; sourceTree = "<group>"; };
+		83EB864A29431F3300BFCD5F /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		83EB864C29431F7E00BFCD5F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		83EB864E29431FC900BFCD5F /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,8 @@
 			children = (
 				836E6F6F2940976200893DC4 /* iPApp.swift */,
 				836E6F7E294097F900893DC4 /* IPViews */,
+				83EB864929431ED800BFCD5F /* OnboardingViews */,
+				83EB864629431E7B00BFCD5F /* NetworkViews */,
 				836E6F802940986100893DC4 /* APIs */,
 				836E6F732940976400893DC4 /* Assets.xcassets */,
 				836E6F752940976400893DC4 /* iP.entitlements */,
@@ -89,6 +99,24 @@
 				836E6F812940987200893DC4 /* ManageAPIs.swift */,
 			);
 			path = APIs;
+			sourceTree = "<group>";
+		};
+		83EB864629431E7B00BFCD5F /* NetworkViews */ = {
+			isa = PBXGroup;
+			children = (
+				83EB864729431E9600BFCD5F /* NetworkView.swift */,
+				83EB864A29431F3300BFCD5F /* NetworkMonitor.swift */,
+			);
+			path = NetworkViews;
+			sourceTree = "<group>";
+		};
+		83EB864929431ED800BFCD5F /* OnboardingViews */ = {
+			isa = PBXGroup;
+			children = (
+				83EB864C29431F7E00BFCD5F /* OnboardingView.swift */,
+				83EB864E29431FC900BFCD5F /* PageView.swift */,
+			);
+			path = OnboardingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +190,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				836E6F722940976200893DC4 /* IPView.swift in Sources */,
+				83EB864F29431FC900BFCD5F /* PageView.swift in Sources */,
+				83EB864B29431F3300BFCD5F /* NetworkMonitor.swift in Sources */,
 				836E6F84294098AB00893DC4 /* IPViewModel.swift in Sources */,
 				836E6F822940987200893DC4 /* ManageAPIs.swift in Sources */,
+				83EB864829431E9600BFCD5F /* NetworkView.swift in Sources */,
 				836E6F702940976200893DC4 /* iPApp.swift in Sources */,
+				83EB864D29431F7E00BFCD5F /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
